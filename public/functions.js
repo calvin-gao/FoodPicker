@@ -9,7 +9,7 @@ async function main(req,res) {
         term: 'Four Barrel Coffee',
         location: 'san francisco, ca',
     }).then(response => {
-        make_page(req, res, response);
+        make_page(req, res, response.jsonBody);
     }).catch(e => {
         console.log(e);
     });
