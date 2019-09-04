@@ -5,12 +5,12 @@ const API_KEY = "shiSLJAHIMJ0fUf9p2LtOCHHaygchm7KSMM-KmnXTS-hHQHFaEjPasuJgphfIOz
 const client = yelp.client(API_KEY);
 
 module.exports = {
-    getField: function() {
-        client.search({
+    getField: function () {
+        return client.search({
             term: 'Four Barrel Coffee',
             location: 'san francisco, ca',
         }).then(response => {
-            console.log((response.jsonBody.businesses[0].name));
+            console.log(response.jsonBody.businesses[0].name);
         }).catch(e => {
             console.log(e);
         });

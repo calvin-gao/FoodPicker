@@ -6,6 +6,7 @@ const API_KEY = "shiSLJAHIMJ0fUf9p2LtOCHHaygchm7KSMM-KmnXTS-hHQHFaEjPasuJgphfIOz
 const client = yelp.client(API_KEY);
 
 const functions = require('./public/functions');
+const fs = require("fs");
 
 const express = require("express");
 const app = express();
@@ -15,11 +16,13 @@ const ejs = require('ejs');
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
-app.get("/results",function(req,res){
-    res.send(functions.getField());
-})
+app.get("/results", function (req, res) {
+    var result = ejs.compile(fs.readFileSync(__dirname + '/views/results.ejs', 'utf8'));
+    var html = result({ name: functions.getField()});
+    res.send(html);
+});
 
-app.get('/', function (req, res) {
+    app.get('/', function (req, res) {
 
     res.render("main");
 });
