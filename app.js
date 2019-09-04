@@ -17,9 +17,14 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
 app.get("/results", function (req, res) {
-    var result = ejs.compile(fs.readFileSync(__dirname + '/views/results.ejs', 'utf8'));
-    var html = result({ name: functions.getField()});
-    res.send(html);
+    client.search({
+        term: 'Four Barrel Coffee',
+        location: 'san francisco, ca',
+    }).then(response => {
+        res.render("results", ({ name: (response.jsonBody.businesses[0].name)}));
+    }).catch(e => {
+        console.log(e);
+    });
 });
 
     app.get('/', function (req, res) {
