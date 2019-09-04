@@ -17,14 +17,7 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
 app.get("/results", function (req, res) {
-    client.search({
-        term: 'Four Barrel Coffee',
-        location: 'san francisco, ca',
-    }).then(response => {
-        res.render("results", ({ name: (response.jsonBody.businesses[0].name)}));
-    }).catch(e => {
-        console.log(e);
-    });
+    functions.main(req, res);
 });
 
     app.get('/', function (req, res) {
