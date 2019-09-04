@@ -18,7 +18,8 @@ async function main(req, res) {
     client.search({
         location: user_requested.location,
         radius: Number(user_requested.distance),
-        price: user_requested.priceRange
+        price: user_requested.priceRange,
+        term: user_requested.searchTerm
     }).then(response => {
         make_page(user_requested, res, response.jsonBody);
     }).catch(e => {
@@ -39,7 +40,8 @@ function make_page(user_requested, res, response) {
             location: user_requested.location,
             radius: user_requested.distance,
             price: user_requested.priceRange,
-            name: getRandomStore(response)
+            name: getRandomStore(response),
+            term: user_requested.searchTerm
         }
     );
 }
@@ -60,16 +62,16 @@ function getRandomInt()
 function getRandomStore(response)
 {
     var storeArray = [];
-    var arrLen = Object.keys(response.businesses[0]).length; // arr length of business
-    console.log(arrLen);
+    var arrLen = response.businesses.length; // arr length of business
+    // console.log(arrLen);
     for( var i = 0; i < arrLen; i++)
     {
         storeArray.push(response.businesses[i].name);
     }
-    return storeArray;
+    return storeArray[getRandomInt()];
     // return response.businesses[getRandomInt()].name;
-
 }
+
 
 
 //exporting main only since that's all app.js needs--------------------------------
