@@ -16,9 +16,8 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
 app.get("/results",function(req,res){
-  res.render("results",{functions : functions});
-  // res.send(functions.getField());
-});
+    res.send(functions.getField());
+})
 
 app.get('/', function (req, res) {
 
