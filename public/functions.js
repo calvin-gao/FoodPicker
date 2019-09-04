@@ -18,7 +18,8 @@ async function main(req,res) {
 
 function make_page(req, res, response) {
     console.log();
-    res.send(req.query.userRequest);
+    //req.query.userRequest to send message
+    res.render("results", { location: req.query.userRequest.location});
 }
 
 module.exports.main = main;
