@@ -9,11 +9,16 @@ async function main(req,res) {
         term: 'Four Barrel Coffee',
         location: 'san francisco, ca',
     }).then(response => {
-        res.render("results", ({ name: response.jsonBody.businesses[0].name}));
+        make_page(req, res, response);
     }).catch(e => {
         console.log(e);
     });
 
+}
+
+function make_page(req, res, response) {
+    console.log();
+    res.send(req.query.userRequest);
 }
 
 module.exports.main = main;

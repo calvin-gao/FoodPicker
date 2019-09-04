@@ -20,8 +20,7 @@ app.get("/results", function (req, res) {
     functions.main(req, res);
 });
 
-    app.get('/', function (req, res) {
-
+app.get('/', function (req, res) {
     res.render("main");
 });
 
