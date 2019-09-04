@@ -59,7 +59,16 @@ function getRandomInt()
 //res is render shit LOL
 function getRandomStore(response)
 {
-    return response.businesses[getRandomInt()].name;
+    var storeArray = [];
+    var arrLen = Object.keys(response.businesses[0]).length; // arr length of business
+    console.log(arrLen);
+    for( var i = 0; i < arrLen; i++)
+    {
+        storeArray.push(response.businesses[i].name);
+    }
+    return storeArray;
+    // return response.businesses[getRandomInt()].name;
+
 }
 
 
