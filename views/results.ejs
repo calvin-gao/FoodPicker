@@ -5,6 +5,23 @@
 <h3> <%= price %> </h3>
 <p>You have searched by: <%= term %></p>
 <h4>Your result: <%= name %> </h4>
-<div id ="google_map_holder"><div id="google_map"></div></div>
+
+<div class="container-fluid mt-4">
+  <div class="row">
+    <div class="col-sm-5">
+      <div id ="google_map_holder">
+          <div id="google_map">
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-7">
+      <div>
+        <a href="<%= yelpURL%>"><h3><%= name %>'s Yelp Link</h3></a>
+        <img src= "<%= image %>">
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <% include ./partials/footer_results %>

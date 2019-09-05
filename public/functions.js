@@ -43,7 +43,9 @@ function make_page(user_requested, res, response) {
             price: user_requested.priceRange,
             name: business.name,
             term: user_requested.searchTerm,
-            location_restaurant: getBusiLocStr(business)
+            location_restaurant: getBusiLocStr(business),
+            image : business.image_url,
+            yelpURL: business.url
         }
     );
 }
@@ -94,6 +96,7 @@ function checkUS(country) {
         return "US";
     }
 }
+
 
 
 //exporting main only since that's all app.js needs--------------------------------
