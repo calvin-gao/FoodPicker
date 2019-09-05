@@ -35,20 +35,32 @@ async function main(req, res) {
 //renders the page, add functions that calculate from response.jsonBody here
 function make_page(user_requested, res, response) {
     console.log();
+    var business = getRandomStore(response);
     res.render("results",
         {
             location: user_requested.location,
             radius: user_requested.distance,
             price: user_requested.priceRange,
-            name: getRandomStore(response),
+            name: business.name,
             term: user_requested.searchTerm,
-            location_restaurant: "1628 Hostetter Rd Ste, San Jose, CA, USA"
+            location_restaurant: getBusiLocStr(business)
         }
     );
 }
 
 
 //helper functions 2------------------------------------------------------------------------
+
+function getBusiLocStr(business) {
+    // gets the business and compiles a string to send to location_restaraunt
+    return business.location.address1 +
+        ", " +
+        business.location.city +
+        ", " +
+        business.location.state +
+        ", " +
+        checkUS(business.location.country);
+}
 
 
 function getRandomInt()
@@ -67,12 +79,21 @@ function getRandomStore(response)
     // console.log(arrLen);
     for( var i = 0; i < arrLen; i++)
     {
-        storeArray.push(response.businesses[i].name);
+        storeArray.push(response.businesses[i]);
     }
     return storeArray[getRandomInt()];
     // return response.businesses[getRandomInt()].name;
 }
 
+function checkUS(country) {
+    //checks if country is "US" and changes it accordingly
+    if (country == "US") {
+        return "USA";
+    }
+    else {
+        return "US";
+    }
+}
 
 
 //exporting main only since that's all app.js needs--------------------------------
