@@ -2,9 +2,3 @@ body {
     background: #eee8d5;
 }
 
-#google_map_holder {
-    vertical-align: middle;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
