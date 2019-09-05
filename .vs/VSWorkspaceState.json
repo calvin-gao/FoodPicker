@@ -3,8 +3,9 @@
     "",
     "\\public",
     "\\public\\stylesheets",
-    "\\views"
+    "\\views",
+    "\\views\\partials"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\views\\partials\\header.ejs",
   "PreviewInSolutionExplorer": false
 }
