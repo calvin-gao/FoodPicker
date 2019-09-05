@@ -41,7 +41,8 @@ function make_page(user_requested, res, response) {
             radius: user_requested.distance,
             price: user_requested.priceRange,
             name: getRandomStore(response),
-            term: user_requested.searchTerm
+            term: user_requested.searchTerm,
+            location_restaurant: "1628 Hostetter Rd Ste, San Jose, CA, USA"
         }
     );
 }

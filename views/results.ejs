@@ -1,11 +1,10 @@
-<% include ./partials/header %>
+<% include ./partials/header_results %>
 
 <h1> Your starting location: <%= location %> </h1>
 <h2> <%= radius %> </h2>
 <h3> <%= price %> </h3>
 <p>You have searched by: <%= term %></p>
 <h4>Your result: <%= name %> </h4>
+<div id="google_map"></div>
 
-
-
-<% include ./partials/footer %>
+<% include ./partials/footer_results %>

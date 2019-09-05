@@ -1,0 +1,23 @@
+<!-- Used as script for making google maps work! -->
+<!--	Specify longitude and latitude, however  -->
+
+
+<script>(function () {
+  var setting = {"height":512,"width": window.innerWidth,"zoom":14,
+  "queryString":"<%= location_restaurant %>",
+  "satellite":false,
+  "centerCoord":[37.75771992816863,-122.43760000000003],
+  "id":"google_map",
+  "embed_id":"80929"};
+  var d = document;
+  var s = d.createElement('script');
+  s.src = 'https://1map.com/js/script-for-user.js?embed_id=80929';
+  s.async = true;
+  s.onload = function (e) {
+  window.OneMap.initMap(setting)
+  };
+  var to = d.getElementsByTagName('script')[0];
+  to.parentNode.insertBefore(s, to);
+  })();
+</script>
+</div>
