@@ -87,6 +87,7 @@ function getRandomStore(response)
     // return response.businesses[getRandomInt()].name;
 }
 
+
 function checkUS(country) {
     //checks if country is "US" and changes it accordingly
     if (country == "US") {

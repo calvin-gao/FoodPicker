@@ -2,6 +2,22 @@ body {
     background: #eee8d5;
 }
 
+.peopleCarouselImg img {
+    width: auto;
+    height: 550px;
+    max-height: 550px;
+}
+
+/* .img {
+    position: relative;
+    float: left;
+    width:  100px;
+    height: 100px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+} */
+
 
 /* a.button {
     -webkit-appearance: button;
