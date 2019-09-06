@@ -23,8 +23,13 @@ async function main(req, res) {
     }).then(response => {
         make_page(user_requested, res, response.jsonBody);
     }).catch(e => {
-        req.flash('info', JSON.parse(e.response.body).error.description);
+        if (e.statusCode == 400) {
+            req.flash('info', JSON.parse(e.response.body).error.description);
+        } else {
+            req.flash('info', "o no UwU");
+        }
         res.redirect('/');
+
     });
 
 }
