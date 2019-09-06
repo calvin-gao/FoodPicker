@@ -27,6 +27,7 @@ app.use(session({
     saveUninitialized: true
 }));
 app.use(flash());
+//used for error handling
 
 app.get("/results", function (req, res) {
     functions.main(req, res);

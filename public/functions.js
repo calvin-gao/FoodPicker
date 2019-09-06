@@ -23,7 +23,7 @@ async function main(req, res) {
     }).then(response => {
         make_page(user_requested, res, response.jsonBody);
     }).catch(e => {
-        req.flash('info', 'O no, U didn\'t choose correctly LOL');
+        req.flash('info', JSON.parse(e.response.body).error.description);
         res.redirect('/');
     });
 
