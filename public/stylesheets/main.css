@@ -1,5 +1,6 @@
 body {
     background: #eee8d5;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .peopleCarouselImg img {
@@ -7,6 +8,27 @@ body {
     height: 550px;
     max-height: 550px;
 }
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+}
+
+
+/* 
+this is for drop down if we use
+[data-toggle="collapse"] i:before{
+    content: "\f146";
+}
+
+[data-toggle="collapse"].collapsed i:before{
+    content: "\f0fe";
+} */
 
 /* .img {
     position: relative;

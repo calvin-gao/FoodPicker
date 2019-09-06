@@ -1,7 +1,19 @@
 body {
     background: #eee8d5;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #google_map_holder {
     margin: auto;
 }
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+}
+

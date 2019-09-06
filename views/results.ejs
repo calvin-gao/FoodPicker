@@ -1,10 +1,24 @@
 <% include ./partials/header_results %>
 
-<h1> Your starting location: <%= location %> </h1>
-<h2> <%= radius %> </h2>
-<h3> <%= price %> </h3>
-<p>You have searched by: <%= term %></p>
-<h4>Your result: <%= name %> </h4>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col text-center">
+      <h1> Your starting location: <%= location %> </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <p>You have searched by: <%= term %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <h4>Your result: <%= name %> </h4>
+    </div>
+  </div>
+
+</div>
+
 
 
 <div class="container-fluid mt-4">

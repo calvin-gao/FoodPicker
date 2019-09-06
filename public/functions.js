@@ -26,7 +26,7 @@ async function main(req, res) {
         if (e.statusCode == 400) {
             req.flash('info', JSON.parse(e.response.body).error.description);
         } else {
-            req.flash('info', "o no UwU");
+            req.flash('info', "Invalid search by term please try again");
         }
         res.redirect('/');
 
