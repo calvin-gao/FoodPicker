@@ -8,6 +8,10 @@ const client = yelp.client(API_KEY);
 const functions = require('./public/functions');
 const fs = require("fs");
 
+var flash = require('connect-flash');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+
 const express = require("express");
 const app = express();
 const ejs = require('ejs');
@@ -15,13 +19,21 @@ const ejs = require('ejs');
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
+app.use(cookieParser());
+app.use(session({
+    cookie: { maxAge: 60000 },
+    secret: "FoodPicker",
+    resave: true,
+    saveUninitialized: true
+}));
+app.use(flash());
 
 app.get("/results", function (req, res) {
     functions.main(req, res);
 });
 
 app.get('/', function (req, res) {
-    res.render("main");
+    res.render("main", { messages: req.flash('info') });
 });
 
 var server = app.listen(3000,function(){

@@ -11,8 +11,11 @@
   "dependencies": {
     "amd-loader": "0.0.8",
     "brfs": "^2.0.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.4",
     "ejs": "^2.7.1",
     "express": "^4.17.1",
+    "express-session": "^1.16.2",
     "yelp-fusion": "^3.0.0"
   }
 }

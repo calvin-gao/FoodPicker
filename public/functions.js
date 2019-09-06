@@ -23,7 +23,8 @@ async function main(req, res) {
     }).then(response => {
         make_page(user_requested, res, response.jsonBody);
     }).catch(e => {
-        console.log(e);
+        req.flash('info', 'O no, U didn\'t choose correctly LOL');
+        res.redirect('/');
     });
 
 }
@@ -34,7 +35,6 @@ async function main(req, res) {
 
 //renders the page, add functions that calculate from response.jsonBody here
 function make_page(user_requested, res, response) {
-    console.log();
     var business = getRandomStore(response);
     res.render("results",
         {
