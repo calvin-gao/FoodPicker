@@ -6,6 +6,6 @@
     "\\views",
     "\\views\\partials"
   ],
-  "SelectedNode": "\\views\\results.ejs",
+  "SelectedNode": "\\views\\partials\\footer.ejs",
   "PreviewInSolutionExplorer": false
 }

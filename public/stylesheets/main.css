@@ -19,6 +19,15 @@ hr {
     background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
 }
 
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
 
 /* 
 this is for drop down if we use

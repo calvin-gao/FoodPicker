@@ -17,3 +17,6 @@ hr {
     background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
 }
 
+.shadow {
+    box-shadow: 2px 2px 5px #5b5b5b;
+}
