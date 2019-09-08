@@ -27,6 +27,7 @@ app.use(flash());
 //used for error handling
 
 app.get("/results", function (req, res) {
+    // rendering results page
     functions.main(req, res);
 });
 
