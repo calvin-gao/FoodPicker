@@ -1,7 +1,7 @@
 # FoodPicker
 
 FoodPicker is a website that is used to find businesses mainly focusing on restaurants. By providing the given parameters location, distance
-price and a search tag the application will randomly generate you a location using YelpAPI. Our goal is to ease people's indecisiveness and help make the process fun
+price and a search tag the application will randomly generate you a location using YelpAPI. Our goal is to ease people's indecisiveness and help make the process fun.
 
 ## Author
 * [Calvin Gao](https://github.com/calvin-gao)
