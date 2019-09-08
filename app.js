@@ -1,6 +1,4 @@
-
 // 'use strict';
-
 const yelp = require('yelp-fusion');
 const API_KEY = "shiSLJAHIMJ0fUf9p2LtOCHHaygchm7KSMM-KmnXTS-hHQHFaEjPasuJgphfIOzJ-PVAs-bGo0Q_5Z2IfxhZxVOLneYu6Q1mwVYYn0co6GBU1E4zeduYgUnxCl9tXXYx";
 const client = yelp.client(API_KEY);
@@ -29,6 +27,7 @@ app.use(flash());
 //used for error handling
 
 app.get("/results", function (req, res) {
+    // rendering results page
     functions.main(req, res);
 });
 
