@@ -44,8 +44,10 @@ hr {
 
 .transparent {
     background-color: #00000000 !important;
-    border:none !important;
+    border: none !important;
+    display: none !important;
 }
+
 .relative {
     position: relative;
 }
