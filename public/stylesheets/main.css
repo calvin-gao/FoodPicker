@@ -45,7 +45,9 @@ hr {
 .transparent {
     background-color: #00000000 !important;
     border: none !important;
-    display: none !important;
+    appearance: none !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
 }
 
 .relative {
