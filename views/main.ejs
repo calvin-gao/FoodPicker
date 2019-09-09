@@ -9,7 +9,7 @@
 </div>
 
 <div class="container fluid">
-<div class="container my-4">
+<div class="container my-4" style="display:none">
   <div id="carouselExample1" class="carousel slide z-depth-1-half peopleCarouselImg" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -45,12 +45,15 @@
 <div class="container-fluid mt-4">
   <form action="/results" method="GET">
     <div class="row justify-content-center">
-      <div class="col-sm-3">
-        <label for="InputLocation">Location</label>
-        <input type="text" id="InputLocation" class="form-control" name= userRequest[location] placeholder="location">
+      <div class="col-sm-4 relative">
+        <img src="pics/form2.png" class="img-fluid" />
+        <div class="centered col-sm-9">
+          <label for="InputLocation"><font size="2">Location</font></label>
+          <input type="text" id="InputLocation" class="form-control rounded-0 transparent" name= userRequest[location] placeholder="Location">
+        </div>
       </div>
-      <div class="col-sm-5 relative">
-        <img src="pics/form1.png" class="img-fluid">
+      <div class="col-sm-4 relative">
+        <img src="pics/form2.png" class="img-fluid" />
         <div class="form-group centered col-sm-9">
 			<label for="distance"><font size="2">Distance (Miles)</font></label>
 			<select class="form-control rounded-0 transparent" name= userRequest[distance] id="distance">
@@ -62,9 +65,11 @@
 			</select>
           </div>
       </div>
-      <div class="form-group">
-          <label for="priceRange">Price Range</label>
-          <select class="form-control" name= userRequest[priceRange] id="priceRange">
+	  <div class="col-sm-3 relative">
+	    <img src="pics/form3.png" class="img-fluid" />
+        <div class="form-group centered col-sm-9">
+          <label for="priceRange"><font size="2">Price Range</font></label>
+          <select class="form-control rounded-0 transparent" name= userRequest[priceRange] id="priceRange">
             <option value= "1">$</option>
             <option value= "2">$$</option>
             <option value= "3">$$$</option>
@@ -72,12 +77,16 @@
             <option value= "5">$$$$$</option>
           </select>
         </div>
+	  </div>
     </div>
-    <div class="row justify-content-center">
-      <div class="col-sm-3">
-          <label for="searchTerm">Seach By</label>
-          <input type="text" id="searchTerm" class="form-control" name= userRequest[searchTerm] placeholder="Ex: food/restaurants/names">
-        </div>
+    <div class="row justify-content-center mt-4">
+      <div class="col-sm-8">
+        <img src="pics/form4.png" class="img-fluid" />
+		<div class="col-sm-9 centered">
+          <label for="searchTerm"><font size="2">Seach By</font></label>
+          <input type="text" id="searchTerm" class="form-control rounded-0 transparent" name= userRequest[searchTerm] placeholder="Ex: food/restaurants/names" />
+		</div>
+      </div>
     </div>
     <div class="container">
         <div class="row">
