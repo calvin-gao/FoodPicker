@@ -42,6 +42,14 @@ hr {
     color: #d11717;
 }
 
+.transparent {
+    background-color: #00000000 !important;
+    border:none !important;
+}
+.relative {
+    position: relative;
+}
+
 
 
 /* 

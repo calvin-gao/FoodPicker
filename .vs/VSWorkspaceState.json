@@ -2,6 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\public",
+    "\\public\\pics",
     "\\public\\stylesheets",
     "\\views",
     "\\views\\partials"
