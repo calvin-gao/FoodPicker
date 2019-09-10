@@ -1,6 +1,10 @@
 body {
-    background: #eee8d5;
+    background: #1e292e;
     font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+h1, h3{
+    display:inline;
 }
 
 #google_map_holder {
