@@ -67,11 +67,12 @@ div.form4 {
     max-width: 100%;
     max-height: 100%;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 860px) {
     div.form4 {
-        background-image: url("../pics/form2.png");
+        background-image: url("../pics/form1.png");
     }
 }
 
@@ -82,15 +83,17 @@ div.form3 {
     max-width: 100%;
     max-height: 100%;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 div.form2 {
     background-image: url("../pics/form2.png");
     width: auto;
-    background-size: cover;
+    background-size: contain;
     max-width: 100%;
     max-height: 100%;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 div.form1 {
@@ -100,22 +103,38 @@ div.form1 {
     max-width: 100%;
     max-height: 100%;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
+div.button1 {
+    background-image: url("../pics/button1.png");
+    width: auto;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
 .py-2p5 {
-    padding-bottom: 1.5rem !important;
+    padding-bottom: 1.7rem !important;
+    padding-top: .7rem !important;
 }
 
 .py-3p5 {
     padding-bottom: 2.3rem !important;
+    padding-top: .7rem !important;
 }
 
 .py-4p5 {
-    padding-bottom: .6rem !important;
+    padding-bottom: 1rem !important;
+    padding-top: .7rem !important;
 }
 
 .py-5p5 {
-    padding-bottom: 2.3rem !important;
+    padding-bottom: 2rem !important;
+    padding-top:.7rem !important;
 }
 /* 
 this is for drop down if we use
