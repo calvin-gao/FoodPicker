@@ -46,15 +46,18 @@
   <form action="/results" method="GET">
     <div class="row justify-content-center">
       <div class="col-sm-5 relative">
-        <img src="pics/form1.png" class="img-fluid" />
-        <div class="centered col-9">
-          <label for="InputLocation"><font size="2">Location</font></label>
-          <input type="text" id="InputLocation" class="form-control rounded-0 transparent font_size" name= userRequest[location] placeholder="Location">
+		<div class="form1">
+        <div class="py-4p5 px-auto m-auto col-10">
+		  <div class="form-group py-auto mx-auto">
+            <label for="InputLocation"><font size="2">Location</font></label>
+            <input type="text" id="InputLocation" class="form-control rounded-0 transparent" name= userRequest[location] placeholder="Location">
+          </div>
         </div>
+	  </div>
       </div>
       <div class="col-sm-4 relative">
-        <img src="pics/form2.png" class="img-fluid" />
-        <div class="form-group centered col-9">
+        <div class="form2">
+        <div class="form-group py-3p5 px-auto m-auto col-10">
 			<label for="distance"><font size="2">Distance (Miles)</font></label>
 			<select class="form-control rounded-0 transparent" name= userRequest[distance] id="distance">
 				<option value= "8047">5</option>
@@ -64,10 +67,11 @@
 				<option value= "39999">25</option>
 			</select>
           </div>
+		  </div>
       </div>
 	  <div class="col-sm-3 relative">
-	    <img src="pics/form3.png" class="img-fluid" />
-        <div class="form-group centered col-9">
+	  <div class="form3">
+        <div class="form-group py-2p5 px-auto m-auto col-10">
           <label for="priceRange"><font size="2">Price Range</font></label>
           <select class="form-control rounded-0 transparent" name= userRequest[priceRange] id="priceRange">
             <option value= "1">$</option>
@@ -78,14 +82,16 @@
           </select>
         </div>
 	  </div>
+	  </div>
     </div>
     <div class="row justify-content-center mt-4">
       <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-8">
-        <img src="pics/form4.png" class="img-fluid" />
-		<div class="col-9 centered font_size">
+        <div class="form4">
+		<div class="col-10 py-3 px-auto m-auto font_size">
           <label for="searchTerm"><font size="2">Seach By</font></label>
-          <input type="text" id="searchTerm" class="form-control rounded-0 transparent font_size" name= userRequest[searchTerm] placeholder="Ex: food/restaurants/names" />
-		</div>
+          <input type="text" id="searchTerm" class="form-control rounded-0 transparent" name= userRequest[searchTerm] placeholder="Ex: food/restaurants/names" />
+        </div>
+        </div>
       </div>
     </div>
     <div class="container">
