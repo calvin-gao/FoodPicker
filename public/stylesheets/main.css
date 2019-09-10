@@ -55,6 +55,11 @@ hr {
     position: relative;
 }
 
+.font_size {
+    font-size: 3;
+    font-size: 3vh;
+}
+
 
 
 /* 
