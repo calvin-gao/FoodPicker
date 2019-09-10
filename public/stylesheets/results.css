@@ -21,6 +21,40 @@ hr {
     background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
 }
 
-.shadow {
-    box-shadow: 2px 2px 5px #5b5b5b;
+.bottom_border {
+    border-style: hidden !important;
+    border-bottom: 1px solid #5f5f5f !important;
+}
+
+.wrap-around {
+    overflow-wrap: anywhere !important;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.white_font {
+    color: #ffffff;
+}
+
+    .white_font:hover {
+        color: #d11717;
+    }
+
+.transparent {
+    background-color: #00000000 !important;
+    border-style: hidden !important;
+    border-bottom: 1px solid #5f5f5f !important;
+    appearance: none !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+}
+
+.font_size {
+    font-size: 3;
+    font-size: 100%;
 }
