@@ -70,6 +70,16 @@ div.form4 {
     background-size: 100% 100%;
 }
 
+.fade
+{
+    opacity:0.5;
+}
+
+.fade:hover
+{
+        opacity:1;
+}
+
 @media screen and (max-width: 860px) {
     div.form4 {
         background-image: url("../pics/form1.png");
