@@ -21,7 +21,7 @@
 
 
 
-<div class="container-fluid mt-4">
+<div class="container-fluid mt-4 justify-content-between text-center">
   <div class="row">
     <div class="col-sm-6">
       <div id ="google_map_holder">
@@ -35,20 +35,21 @@
       </div>
     </div>
   </div>
-  
-  <a href="<%= yelpURL%>"><div type="button" class="btn btn-link col-7 col-sm-6 col-md-5 col-lg-4 col-xl-3 mx-3 transparent white_font">
-        <img src="pics/button2.png" class="img-fluid">
-        <h6 size="auto" class="font_size centered wrap-around col-9"><%= name %>'s <br/> Yelp Link</h6>
+    <a href="<%= yelpURL%>"><div type="button" class="btn btn-link col-7 col-sm-6 col-md-5 col-lg-4 col-xl-3 transparent white_font">
+        <div class="button2">
+          <h6 size="auto" class="font_size wrap-around col-9 py-5p5 mx-auto"><%= name %>'s <br/> Yelp Link</h6>
+        </div>
       </div></a>
-      <a href=""><div type="button" class="btn btn-link col-7 col-sm-6 col-md-5 col-lg-4 col-xl-3 mx-3 transparent white_font">
-        <img src="pics/button3.png" class="img-fluid">
-        <h6 size="auto" class="font_size text centered col-9">Choose another <br/> restaurant</h6>
+      <a href=""><div type="button" class="btn btn-link col-7 col-sm-6 col-md-5 col-lg-4 col-xl-3 transparent white_font">
+        <div class="button3">
+        <h6 size="auto" class="font_size text py-5p5 mx-auto col-9">Choose another <br/> restaurant</h6>
+          </div>
       </div></a>
       <a href="/"><div type="button" class="btn btn-link col-7 col-sm-6 col-md-5 col-lg-4 col-xl-3 transparent white_font">
-        <img src="pics/button4.png" class="img-fluid">
-        <h6 class="font_size text centered col-9">Choose again</h6>
-      </div></a>
+        <div class="button4">
+            <h6 class="font_size text py-5p5 mx-auto col-9">Choose again</h6>
+          </div>
+        </div></a>
 </div>
-
 
     <% include ./partials/footer_results %>

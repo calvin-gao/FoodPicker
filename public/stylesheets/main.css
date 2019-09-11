@@ -109,7 +109,6 @@ div.form1 {
 div.button1 {
     background-image: url("../pics/button1.png");
     width: auto;
-    background-size: cover;
     max-width: 100%;
     max-height: 100%;
     background-repeat: no-repeat;

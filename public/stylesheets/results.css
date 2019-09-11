@@ -49,9 +49,42 @@ hr {
 
 .font_size {
     font-size: 3;
-    font-size: 3vh;
+    font-size: 1rem;
+    text-overflow: ellipsis;
 }
 
 .headers{
     color:white;
+}
+
+div.button2 {
+    background-image: url("../pics/button2.png");
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+div.button3 {
+     background-image: url("../pics/button3.png");
+     width: auto;
+     max-width: 100%;
+     max-height: 100%;
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+ }
+
+div.button4 {
+    background-image: url("../pics/button4.png");
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.py-5p5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
 }
