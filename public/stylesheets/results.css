@@ -88,3 +88,13 @@ div.button4 {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
 }
+
+.fade
+{
+    opacity:0.5;
+}
+
+.fade:hover
+{
+    opacity:1;
+}
