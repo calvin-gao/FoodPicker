@@ -37,8 +37,14 @@ app.get('/', function (req, res) {
     res.render("main", { messages: req.flash('info') });
 });
 
+<<<<<<< HEAD
 
 app.listen(process.env.PORT || 3000, function(){
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
   });
+=======
+var server = app.listen((process.env.PORT||3000),function(){
+  console.log("SERVER HAS STARTED");
+});
+>>>>>>> 88dcbd6df760de624a50ab2770ae5b450204f123
 
