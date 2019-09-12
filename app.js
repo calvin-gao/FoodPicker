@@ -8,17 +8,18 @@ const fs = require("fs");
 
 var flash = require('connect-flash');
 var cookieParser = require('cookie-parser');
-var session = require('cookie-session');
+var cookieSession = require('cookie-session');
 
 const express = require("express");
 const app = express();
 const ejs = require('ejs');
+const port = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(cookieParser());
-app.use(session({
-    cookie: { maxAge: 60000 },
+app.use(cookieSession({
+    cookie: { maxAge: 24 * 60 * 60 * 1000 },
     secret: "FoodPicker",
     resave: true,
     saveUninitialized: true
@@ -35,7 +36,8 @@ app.get('/', function (req, res) {
     res.render("main", { messages: req.flash('info') });
 });
 
-var server = app.listen(3000,function(){
-  console.log("SERVER HAS STARTED");
-});
+
+var server = app.listen(port, () => {
+    console.log('Express server listening on port', port)
+  });
 
