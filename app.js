@@ -24,6 +24,7 @@ app.use(cookieSession({
     resave: true,
     saveUninitialized: true
 }));
+
 app.use(flash());
 //used for error handling
 
@@ -37,7 +38,7 @@ app.get('/', function (req, res) {
 });
 
 
-var server = app.listen(port, () => {
-    console.log('Express server listening on port', port)
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
   });
 
