@@ -8,7 +8,7 @@ const fs = require("fs");
 
 var flash = require('connect-flash');
 var cookieParser = require('cookie-parser');
-var session = require('express-session');
+var session = require('cookie-session');
 
 const express = require("express");
 const app = express();
