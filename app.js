@@ -35,7 +35,7 @@ app.get('/', function (req, res) {
     res.render("main", { messages: req.flash('info') });
 });
 
-var server = app.listen(3000,function(){
+var server = app.listen(process.env.PORT || 3000,function(){
   console.log("SERVER HAS STARTED");
 });
 
