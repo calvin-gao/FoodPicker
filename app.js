@@ -8,7 +8,7 @@ const fs = require("fs");
 
 var flash = require('connect-flash');
 var cookieParser = require('cookie-parser');
-var session = require('cookie-session');
+var cookieSession = require('cookie-session');
 
 const express = require("express");
 const app = express();
@@ -17,8 +17,8 @@ const ejs = require('ejs');
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(cookieParser());
-app.use(session({
-    cookie: { maxAge: 60000 },
+app.use(cookieSession({
+    cookie: { maxAge: 24 * 60 * 60 * 1000 },
     secret: "FoodPicker",
     resave: true,
     saveUninitialized: true
