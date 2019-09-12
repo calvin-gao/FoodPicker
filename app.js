@@ -13,6 +13,7 @@ var cookieSession = require('cookie-session');
 const express = require("express");
 const app = express();
 const ejs = require('ejs');
+const port = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -35,7 +36,8 @@ app.get('/', function (req, res) {
     res.render("main", { messages: req.flash('info') });
 });
 
-var server = app.listen(process.env.PORT || 3000,function(){
-  console.log("SERVER HAS STARTED");
-});
+
+var server = app.listen(port, () => {
+    console.log('Express server listening on port', port)
+  });
 
